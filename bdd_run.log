@@ -1,0 +1,10 @@
+transition relation T: 35 BDD nodes
+R0: 1 states, 3 nodes, [(0, 0, 0)]
+R1: 4 states, 1 nodes, [(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1)]
+R2: 7 states, 3 nodes, [(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0)]
+R3: 8 states, 0 nodes, [(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1)]
+R4: 8 states, 0 nodes, [(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1)]
+
+Fixpoint reached at iteration 4
+R is constant 1 (all 8 states reachable): True
+Reachable (p,q0,q1): ['000', '001', '010', '011', '100', '101', '110', '111']

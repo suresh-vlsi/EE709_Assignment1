@@ -1,0 +1,79 @@
+=== Property (c): not EF(g0.g1), cycles 0..7 ===
+  k=0: UNSAT
+  k=1: UNSAT
+  k=2: UNSAT
+  k=3: UNSAT
+  k=4: UNSAT
+  k=5: UNSAT
+  k=6: UNSAT
+  k=7: UNSAT
+
+=== Property (a): AG(r0 => F g0) ===
+  (a) k=0 (reset cycle, request is discarded)
+    k=0: SAT  (violation found)
+      k : r0 r1 | p q0 q1 | g0 g1
+      0 :  1  0 | 0  0  0 |  0  0
+      1 :  0  0 | 0  0  0 |  0  0
+      2 :  0  0 | 0  0  0 |  0  0
+      3 :  0  0 | 0  0  0 |  0  0
+      4 :  0  0 | 0  0  0 |  0  0
+      5 :  0  0 | 0  0  0 |  0  0
+      6 :  0  0 | 0  0  0 |  0  0
+      7 :  0  0 | 0  0  0 |  0  0
+  (a) k=1..5 (grant due by k+2 <= 7)
+    k=1: UNSAT (no violation)
+    k=2: UNSAT (no violation)
+    k=3: UNSAT (no violation)
+    k=4: UNSAT (no violation)
+    k=5: UNSAT (no violation)
+  (a) k=6..7 (grant may fall outside window)
+    k=6: SAT  (violation found)
+      k : r0 r1 | p q0 q1 | g0 g1
+      0 :  0  0 | 0  0  0 |  0  0
+      1 :  0  0 | 0  0  0 |  0  0
+      2 :  1  0 | 0  0  0 |  0  0
+      3 :  0  0 | 0  1  0 |  1  0
+      4 :  0  0 | 1  0  0 |  0  0
+      5 :  0  0 | 1  0  0 |  0  0
+      6 :  1  1 | 1  0  0 |  0  0
+      7 :  0  0 | 1  1  1 |  0  1
+    k=7: SAT  (violation found)
+
+=== Property (b): AG(r1 => F g1) ===
+  (b) k=0 (reset cycle, request is discarded)
+    k=0: SAT  (violation found)
+      k : r0 r1 | p q0 q1 | g0 g1
+      0 :  0  1 | 0  0  0 |  0  0
+      1 :  0  0 | 0  0  0 |  0  0
+      2 :  0  0 | 0  0  0 |  0  0
+      3 :  0  0 | 0  0  0 |  0  0
+      4 :  0  0 | 0  0  0 |  0  0
+      5 :  0  0 | 0  0  0 |  0  0
+      6 :  0  0 | 0  0  0 |  0  0
+      7 :  0  0 | 0  0  0 |  0  0
+  (b) k=1..5 (grant due by k+2 <= 7)
+    k=1: UNSAT (no violation)
+    k=2: UNSAT (no violation)
+    k=3: UNSAT (no violation)
+    k=4: UNSAT (no violation)
+    k=5: UNSAT (no violation)
+  (b) k=6..7 (grant may fall outside window)
+    k=6: SAT  (violation found)
+      k : r0 r1 | p q0 q1 | g0 g1
+      0 :  0  0 | 0  0  0 |  0  0
+      1 :  0  0 | 0  0  0 |  0  0
+      2 :  0  0 | 0  0  0 |  0  0
+      3 :  0  0 | 0  0  0 |  0  0
+      4 :  0  0 | 0  0  0 |  0  0
+      5 :  0  0 | 0  0  0 |  0  0
+      6 :  1  1 | 0  0  0 |  0  0
+      7 :  0  0 | 0  1  1 |  1  0
+    k=7: SAT  (violation found)
+
+=== Part 2: p(k)=0 for all k, AG(r1 => F g1) ===
+  (2) k=1..5
+    k=1: UNSAT (no violation)
+    k=2: UNSAT (no violation)
+    k=3: UNSAT (no violation)
+    k=4: UNSAT (no violation)
+    k=5: UNSAT (no violation)
